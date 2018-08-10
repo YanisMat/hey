@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+{% load static %}
+
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<!-- <link href="{% static 'c/css/client.446d883db1e292f7f152a49c9f4121ed.css' %}" rel="stylesheet"> -->
+	<link href="client.446d883db1e292f7f152a49c9f4121ed.css" rel="stylesheet">
+	<!-- <link href="{% static 'c/css/checklist.css' %}" rel="stylesheet"> -->
+	<link href="checklist.css" rel="stylesheet">
+	<!-- <link href="{% static 'c/css/btn.css' %}" rel="stylesheet"> -->
+	<link href="btn.css" rel="stylesheet">
+	<script async src="https://script.hotjar.com/modules-e3237c54355663e59832fa7359f942ed.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<script src="{% static 'c/js/jquery.js' %}"></script>
+	<script src="{% static 'c/js/code.js' %}"></script>
+	<script src="{% static 'c/js/checklist.js' %}"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CRoboto:300,400,600,700%7CPT+Sans:300,400,700%7CLato:400,700,800%7CRubik:400,500%7CAbril+Fatface%7CRaleway:300,400,600,700%7CMontserrat:300,400,700%7CExo+2:400,600%7COswald:300,400,700%7CChivo%7CRoboto+Slab:400,700%7CBitter:400,700%7CVolkhov:400,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic,latin,cyrillic-ext,latin-ext,cyrillic,latin,cyrillic-ext,latin-ext,cyrillic,latin,cyrillic-ext,latin-ext,cyrillic,latin,latin-ext,cyrillic,latin,latin-ext,latin,latin-ext,latin,latin,latin-ext,cyrillic,latin,latin-ext,latin,latin,cyrillic-ext,latin-ext,cyrillic,latin,latin-ext,latin,latin-ext" media="all" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1" data-react-helmet="true" id="viewportMeta" name="viewport">
+</head>
+<body class="">
+	<!-- <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-M8QM55B" style="display:none;visibility:hidden" width="0"></iframe></noscript> -->
+	<!-- <div class="initial-loading-container hide">
+		<div class="initial-loading">
+			<svg id="Layer_1" style="enable-background:new 0 0 44 23" version="1.1" viewbox="0 0 44 23" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+			<path class="st0" d="M22.1,14.8l-3.9,3.4C16.4,20,14,21,11.5,21c-2.5,0-4.9-1-6.7-2.8C3,16.4,2,14,2,11.5s1-4.9,2.8-6.7 C6.7,2.8,9.3,1.8,12.1,2c2.4,0.1,4.6,1.3,6.4,3l16,15.9c0,0,0,0,0,0l7.1-13.3c0.4-0.7,0.5-1.5,0.4-2.4c-0.2-1.1-0.8-2-1.7-2.6 c-1.5-1-3.4-0.8-4.7,0.3l-7,6.1" fill="none" id="stem" stroke="#00c091" stroke-dasharray="130"></path></svg> <svg id="Layer_2" style="enable-background:new 0 0 44 23" version="1.1" viewbox="0 0 44 23" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+			<path class="st0" d="M28.6,9.1l7-6.1c1.3-1.1,3.1-1.3,4.7-0.3c0.9,0.6,1.5,1.5,1.7,2.6c0.1,0.9,0,1.7-0.4,2.4L34.5,21c0,0,0,0,0,0 L18.5,5c-1.7-1.7-3.9-2.9-6.4-3C9.3,1.8,6.7,2.8,4.8,4.8C3,6.6,2,9,2,11.5s1,4.9,2.8,6.7C6.6,20,9,21,11.5,21c2.5,0,4.9-1,6.7-2.8 l3.9-3.4" fill="none" id="stem2" stroke="#00c091" stroke-dasharray="130"></path></svg>
+		</div>
+	</div>
+	<section> -->
+		 <!-- <div id="map"> -->
+				<div id="popup1" class="overlay">
+					<div class="popup">
+						<h2>Тут сокрыты тайны жизни</h2>
+						<a class="close" href="#">&times;</a>
+						<div class="content">
+							<p>Тут будет какой-нибудь текст и, возможно даже правила для тебя, друг мой.</p>
+						</div>
+					</div>
+				</div>
+				<div id="content-checklist">
+					 <input type="radio" name="radio-list" id="list-a-check" onChange="return check()" checked>
+					 <input type="radio" name="radio-list" id="list-b-check" onChange="return check()">
+					 <input type="radio" name="radio-list" id="list-c-check" onChange="return check()">
+					 <nav>
+							<ul>
+							<div class="section_a" >
+								<div class="circle_a">
+									<div class="text">HELLO</div>
+								</div>
+								 <li><label for="list-a-check" >Слова/содержание</label></li>
+							</div>
+							<div class="section_b">
+								<div class="circle_b">
+									<div class="text">HELLO</div>
+								</div>
+								 <li><label for="list-b-check">Визуальная часть</label></li>
+							</div>
+							<div class="section_c">
+								<div class="circle_c">
+									<div class="text">HELLO</div>
+								</div>
+								 <li><label for="list-c-check">Компетенции</label></li>
+							</div>
+							</ul>
+							<div class="line_panel">
+					 </nav>
+					<div class="basic_information_a">
+						<div class="name_a">Ваш чек-лист</div>
+						<div class="explanation_a">Тут вы проверяете качество написанного Вами <br>текста в резюме, так как слова могут повлиять <br>на решение рекрутера выбрать именно Вас!</div>
+						<div class="line_a">
+						</div>
+					</div>
+					 <ul class="list" id="list-a">
+							<section class="task-list current">
+								<ul>
+									<li>
+										<div class="checkbox">
+											<div class="check">
+												<input type="checkbox" name="task_00">
+												<div class="ripple-container">
+													<div class="check-off"></div>
+													<div class="check-on"><i></i></div>
+													<div class="check-ripple"></div>
+												</div>
+											</div>
+											<div class="label">
+												<mark>1. Сильные глаголы:</mark>
+												<br>
+												<time datetime="05-12-2016">Сильные глаголы это такие важные слова где <br>вы себя показываете очень мотивированным <br>человеком и Захар дальше все объяснит лучше, <br>чем я</time>
+												<div class="line_check_a_1">
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- кнопка начало -->
+									<div id="wrapper">
+										<p><a class="button" href="#popup1">Узнать больше</a></p>
+									</div>
+									<!-- кнопка конец -->
+									<li>
+										<div class="checkbox">
+											<div class="check">
+												<input type="checkbox" name="task_00">
+												<div class="ripple-container">
+													<div class="check-off"></div>
+													<div class="check-on"><i></i></div>
+													<div class="check-ripple"></div>
+												</div>
+											</div>
+											<div class="label">
+												<mark>2. Специализация:</mark>
+												<br>
+												<time datetime="05-12-2016">Тут у вас расположены такие слова, которые <br>отвечают за ваше профильное наполнение ре- <br>зюме и еще что-то у меня со словами плохо.</time>
+												<div class="line_check_a_2">
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="checkbox">
+											<div class="check">
+												<input type="checkbox" name="task_01">
+												<div class="ripple-container">
+													<div class="check-off"></div>
+													<div class="check-on"><i></i></div>
+													<div class="check-ripple"></div>
+												</div>
+											</div>
+											<div class="label">
+												<mark>3. Общие слова:</mark>
+												<br>
+												<time datetime="05-12-2016">Это такие слова, которые ориентированны на <br>обычное влияние на человека и я даже не знаю, <br>как объяснить это, головой понимаю, аобъяснить <br>не могу</time>
+												<div class="line_check_a_3">
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- кнопка начало -->
+									<div id="wrapper">
+										<p><a class="button" href="#popup1">Узнать больше</a></p>
+									</div>
+									<!-- кнопка конец -->
+									<li>
+										<div class="checkbox">
+											<div class="check">
+												<input type="checkbox" name="task_02">
+												<div class="ripple-container">
+													<div class="check-off"></div>
+													<div class="check-on"><i></i></div>
+													<div class="check-ripple"></div>
+												</div>
+											</div>
+											<div class="label">
+												<mark>4. Запретные слова:</mark>
+												<br>
+												<time datetime="05-12-2016">Избегайте очень плохихз слов и излишней чест-<br>ности, которые выставляют Вас не в лучшем свете</time>
+												<div class="line_check_a_4">
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- кнопка начало -->
+									<div id="wrapper">
+										<p><a class="button" href="#popup1">Узнать больше</a></p>
+									</div>
+									<!-- кнопка конец -->
+								</ul>
+							</section>
+					 </ul>
+
+
+					 <ul class="list" id="list-b">
+						 <section class="task-list current">
+							 <ul>
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_00">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>1. Тут блоки наверное:</mark>
+											 <br>
+											 <time datetime="05-12-2016">프레임 워크의 다양하고 풍부한 경험과 인력 교육 장소는 개발 <br>형태의 정의와 개선이 필요합니다. 따라서 구조의 강화와 발전은 <br>중요성을 도입하고 현대화하는 과정을 수반한다.</time>
+											 <div class="line_check_a_1">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <!-- кнопка начало -->
+								 <div id="wrapper">
+									 <p><a class="button" href="#popup1">Узнать больше</a></p>
+								 </div>
+								 <!-- кнопка конец -->
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_00">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>2. Тут количество листов:</mark>
+											 <br>
+											 <time datetime="05-12-2016">枠組みの多様かつ豊富な経験と人材育成の場では、<br>
+												 開発形態の定義と洗練が必要です。 したがって、<br>重要な要素を導入し近代化するプロセスを必要とする</time>
+											 <div class="line_check_a_2">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_01">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>3. Цвета:</mark>
+											 <br>
+											 <time datetime="05-12-2016">框架的多樣化和豐富經驗以及人員培訓的<br>地點需要定義和完善發展形式。 因此，結構的加強和發<br>展需要引入和現代化重要的過程</time>
+											 <div class="line_check_a_3">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <!-- кнопка начало -->
+								 <div id="wrapper">
+									 <p><a class="button" href="#popup1">Узнать больше</a></p>
+								 </div>
+								 <!-- кнопка конец -->
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_02">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>4. Чистота твоей кармы:</mark>
+											 <br>
+											 <time datetime="05-12-2016">Избегайте очень плохихз слов и излишней чест-<br>ности, которые выставляют Вас не в лучшем свете</time>
+											 <div class="line_check_a_4">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <!-- кнопка начало -->
+								 <div id="wrapper">
+									 <p><a class="button" href="#popup1">Узнать больше</a></p>
+								 </div>
+								 <!-- кнопка конец -->
+							 </ul>
+						 </section>
+					 </ul>
+
+
+					 <ul class="list" id="list-c">
+						 <section class="task-list current">
+							 <ul>
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_00">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>1. Что есть компетенции:</mark>
+											 <br>
+											 <time datetime="05-12-2016">De ferskate en rike ûnderfining fan it ramt en it  <br> freget de definysje en ferfining fan de foarmen fan<br> fan it yntrodearjen en modernisearjen fan belang</time>
+											 <div class="line_check_a_1">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <!-- кнопка начало -->
+								 <div id="wrapper">
+									 <p><a class="button" href="#popup1">Узнать больше</a></p>
+								 </div>
+								 <!-- кнопка конец -->
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_00">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>2. В широком смысле:</mark>
+											 <br>
+											 <time datetime="05-12-2016">અને કર્મચારીઓને તાલીમ આપવાની જગ્યાએ વિકાસની રચનાની<br> છે. આ રીતે, માળખાના મજબૂત અને વિકાસમાં નોંધપાત્ર રજૂઆત <br>અને આધુનિકીકરણની પ્રક્રિયાનો સમાવેશ થાય છે</time>
+											 <div class="line_check_a_2">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_01">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>3. Захар, пришли тексты:</mark>
+											 <br>
+											 <time datetime="05-12-2016">框架的多樣化和豐富經驗以及人員培訓的<br>地點需要定義和完善發展形式。 因此，結構的加強和發<br>展需要引入和現代化重要的過程</time>
+											 <div class="line_check_a_3">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <!-- кнопка начало -->
+								 <div id="wrapper">
+									 <p><a class="button" href="#popup1">Узнать больше</a></p>
+								 </div>
+								 <!-- кнопка конец -->
+								 <li>
+									 <div class="checkbox">
+										 <div class="check">
+											 <input type="checkbox" name="task_02">
+											 <div class="ripple-container">
+												 <div class="check-off"></div>
+												 <div class="check-on"><i></i></div>
+												 <div class="check-ripple"></div>
+											 </div>
+										 </div>
+										 <div class="label">
+											 <mark>4. Китайский закончился:</mark>
+											 <br>
+											 <time datetime="05-12-2016">Избегайте очень плохихз слов и излишней чест-<br>ности, которые выставляют Вас не в лучшем свете</time>
+											 <div class="line_check_a_4">
+											 </div>
+										 </div>
+									 </div>
+								 </li>
+								 <!-- кнопка начало -->
+								 <div id="wrapper">
+									 <p><a class="button" href="#popup1">Узнать больше</a></p>
+								 </div>
+								 <!-- кнопка конец -->
+							 </ul>
+						 </section>
+					 </ul>
+
+					 <!-- кнопка начало -->
+					 <div id="wrapper_next">
+						 <p><a class="button_next">Дальше</a></p>
+					 </div>
+					 <!-- кнопка конец -->
+
+
+				</div>
+
+
+		 <!-- </div> -->
+	<!-- </section> -->
+	<div id="content">
+		<div class="" id="app">
+			<div class="" id="page" tabindex="1">
+				<div class="app resume-editor-page">
+					<div class="app-inner">
+						<div class="Grid">
+							<div class="Grid-cell scrollable-column">
+								<div class="resume-editor-content-box center-block">
+									<div class="resume-editor-wrapper feedback-wrapper">
+										<div class="resume-renderer resume-body-font center-resume" id="resume-null">
+											<style class="resume-colors-style">
+											#resume-null .resume-first-color {
+											 color: #000000 !important;
+											}
+
+											#resume-null .resume-first-color::-webkit-input-placeholder,
+											#resume-null .resume-first-color input::-webkit-input-placeholder {
+											 color: #000000 !important;
+											}
+											#resume-null .resume-first-color:-moz-placeholder,
+											#resume-null .resume-first-color input:-moz-placeholder {
+											 color: #000000 !important;
+											}
+											#resume-null .resume-first-color::-moz-placeholder,
+											#resume-null .resume-first-color input::-moz-placeholder {
+											 color: #000000 !important;
+											}
+											#resume-null .resume-first-color:-ms-input-placeholder,
+											#resume-null .resume-first-color input:-ms-input-placeholder {
+											 color: #000000 !important;
+											}
+
+											#resume-null .resume-first-background {
+											 background-color: #000000 !important;
+											}
+											#resume-null .resume-before-first-background::before {
+											 background-color: #000000 !important;
+											}
+											#resume-null .resume-first-border {
+											 border-color: #000000 !important;
+											}
+											#resume-null .resume-first-fill {
+											 fill: #000000 !important;
+											}
+											#resume-null .resume-first-stroke {
+											 stroke: #000000 !important;
+											}
+
+											#resume-null .resume-second-color {
+											 color: #000 !important;
+											}
+
+											#resume-null .resume-second-color::-webkit-input-placeholder,
+											#resume-null .resume-second-color input::-webkit-input-placeholder {
+											 color: #000 !important;
+											}
+											#resume-null .resume-second-color:-moz-placeholder,
+											#resume-null .resume-second-color input:-moz-placeholder {
+											 color: #000 !important;
+											}
+											#resume-null .resume-second-color::-moz-placeholder,
+											#resume-null .resume-second-color input::-moz-placeholder {
+											 color: #000 !important;
+											}
+											#resume-null .resume-second-color:-ms-input-placeholder,
+											#resume-null .resume-second-color input:-ms-input-placeholder {
+											 color: #000 !important;
+											}
+
+
+											#resume-null .resume-second-background {
+											 background-color: #008CFF !important;
+											}
+											#resume-null .resume-before-second-background::before {
+											 background-color: #008CFF !important;
+											}
+											#resume-null .resume-second-border {
+											 border-color: #008CFF !important;
+											}
+											#resume-null .resume-second-fill {
+											 stroke: #008CFF !important;
+											}
+											#resume-null .resume-second-stroke {
+											 stroke: #008CFF !important;
+											}
+											</style>
+											<style class="resume-fonts-style">
+											#resume-null .resume-heading-font {
+											 font-family:  TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif, sans-serif !important;
+											}
+
+											#resume-null.resume-body-font {
+											 font-family:  TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif, sans-serif !important;
+											}
+											</style>
+											<div style="position: relative; width:700px; left:240px; top: 9px;">
+												<div class="resume-renderer-page browser-resume-page">
+													<div class=""></div>
+													<div>
+														<div class="resume-background-wrapper"></div>
+													</div>
+													<div class="resume-page-wrapper">
+														<div class="">
+															<div>
+																<div class="resume-header resume-header-with-photo editable">
+																	<div class="resume-header-col resume-header-col-left"style="margin-left:9px;">
+																		<div class="editable-field-wrapper">
+																			<textarea class="editable-field name resume-heading-font resume-first-color uppercase-name" maxlength="100" placeholder="Your Name" rows="1" spellcheck="false" style="overflow: hidden; font-size: 29px;border-bottom: 2px solid #000;padding-left: 5px;padding-right: 5px;">{{cv.firstname}} {{cv.lastname}}</textarea>
+																		</div>
+																		<div class="with-icon-container top-sm resume-header-items" style="margin-top:5px;">
+																			<div class="with-icon resume-body-font">
+																				<div class="editable-field-wrapper">
+																					<textarea class="editable-field resume-first-color" placeholder="Phone" rows="1" style="overflow: hidden; word-wrap: break-word; height: 16px;">{{cv.phone}}</textarea>
+																				</div>
+																			</div>
+																			<div class="with-icon resume-body-font"style="margin-left: 440px;">
+																				<div class="editable-field-wrapper">
+																					<textarea class="editable-field resume-first-color" placeholder="Email" rows="1" style="overflow: hidden; word-wrap: break-word; height: 16px;">{{cv.email}}</textarea>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix"></div>
+																</div>
+															</div>
+														</div>
+														<div>
+															<div class="resume-renderer-two-column" style="margin-top:30px;">
+
+
+
+                                <div class="resume-section EducationSection" id="EducationSection-0" style="margin-top: -40px;&gt; &lt;div class=">
+                                  <div>
+                                    <div class="resume-section-text-container">
+                                      <div class="editable-field-wrapper">
+                                        <h1>EDUCATION<h1/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="moveable-items"style="margin-top:7px;">
+                                  <div class="resume-item-holder line-item editable">
+                                    <div draggable="false" id="sections-3-items-0">
+                                      <div class="item-object education-item">
+																				{% for e in ed %}
+	                                        <div class="inner">
+	                                          <div class="education-item-not-gpa">
+	                                            <div class="editable-field-wrapper">
+	                                              <textarea class="editable-field item-degree resume-first-color resume-heading-font" placeholder="Name of university" rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;">{{e.uni_name}}</textarea>
+	                                            </div>
+
+	                                            <div class="editable-field-wrapper">
+	                                              <textarea class="editable-field item-institution resume-second-color" maxlength="60" placeholder="Faculty" rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color:black;line-height: normal; font-style: italic;">12</textarea>
+	                                            </div>
+
+																							<div class="padded-item-content"style="float: right; margin-top: -17px;">
+		                                            <div class="editable-field-wrapper">
+		                                              <textarea class="editable-field achievement-item-description resume-first-color" data-allow-new-line="true" maxlength="1000" placeholder="2016-2020" rows="1" style="text-align: right; overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;">2006-2007</textarea>
+		                                            </div>
+																							</div>
+
+	                                          </div>
+	                                        </div>
+																				{% endfor %}
+																			</div>
+                                    </div>
+                                  </div>
+                                  <div class="resume-item-holder line-item editable"></div>
+                                </div>
+
+
+                                <div class="resume-section ExperienceSection" id="ExperienceSection-0" style="margin-top: -30px;&gt; &lt;div class=">
+                                  <div>
+                                    <div class="resume-section-text-container">
+                                      <div class="editable-field-wrapper">
+                                        <h1>WORK EXPERIENCE<h1/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="moveable-items"style="margin-top:28px;">
+                                  <div class="resume-item-holder line-item editable">
+                                    <div draggable="false" id="sections-0-items-0">
+                                      <div class="item-object experience-item">
+																				{% for e in exp %}
+	                                        <div class="inner">
+	                                          <div class="editable-field-wrapper">
+	                                            <textarea class="editable-field item-position resume-first-color resume-heading-font" placeholder="Company" rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;">{{e.org_name}}</textarea>
+	                                          </div>
+	                                          <div class="editable-field-wrapper">
+	                                            <textarea class="editable-field item-description" data-allow-new-line="true" placeholder="Position." rows="1" style="overflow: hidden;font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;">{{e.org_position}}</textarea>
+	                                          </div>
+																						<div class="padded-item-content"style="float: right;margin-top: -20px;">
+																							<div class="editable-field-wrapper">
+																								<textarea class="editable-field achievement-item-description" data-allow-new-line="true" maxlength="1000" placeholder="2016-2020" rows="1" style="text-align: right; overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;">{{e.org_start}}-{{e.org_end}}</textarea>
+																							</div>
+
+																						</div>
+	                                          <div class="top-xty">
+	                                            <div class="media top-xty no-bottom">
+	                                              <div class="media-body">
+	                                                <div class="editable-field-wrapper">
+	                                                  <ul type="disc">
+																											{% for r in e.org_resp %}
+	                                                    	<li><textarea class="editable-field editable-field-muted editable-field-sm" data-allow-new-line="true" placeholder="Enter your responsibilities." rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;font-style: italic;">{{r}}</textarea></li>
+																											{% endfor %}
+																										</ul>
+	                                                </div>
+	                                              </div>
+	                                            </div>
+	                                          </div>
+
+	                                        </div>
+																				{% endfor %}
+																			</div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="resume-section AchievementsSection" id="AchievementsSection-0" style="margin-top: -30px;&gt; &lt;div class=">
+                                  <div>
+                                    <div class="resume-section-text-container">
+                                      <div class="editable-field-wrapper">
+                                        <h1>ACHIEVEMENTS<h1/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="moveable-items"style="margin-top:9px;">
+                                  <div class="resume-item-holder line-item editable">
+                                    <div draggable="false" id="sections-1-items-0">
+                                      <div class="item-object achievement-item">
+                                        <div class="inner">
+                                          <div class="achievement-item-content">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-title resume-first-color" placeholder="Company" rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;"></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="padded-item-content">
+                                            <div class="editable-field-wrapper">
+                                              <ul type="disc">
+                                                <li><textarea class="editable-field achievement-item-description resume-first-color" data-allow-new-line="true" maxlength="1000" placeholder="Enter your achievements." rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;font-style: italic;"></textarea></li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="resume-section VoluteeringSection" id="VolunteeringSection-0" style="margin-top: -30px;&gt; &lt;div class=">
+                                  <div>
+                                    <div class="resume-section-text-container">
+                                      <div class="editable-field-wrapper">
+                                        <h1>VOLUNTEERING<h1/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="moveable-items"style="margin-top:9px;">
+                                  <div class="resume-item-holder line-item editable">
+                                    <div draggable="false" id="sections-1-items-0">
+                                      <div class="item-object achievement-item">
+                                        <div class="inner">
+                                          <div class="achievement-item-content">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-title resume-first-color" placeholder="Describe your volunteer experience" rows="1" style="overflow: hidden;font-size: 14.6px;color: #000;line-height: normal;font-style: italic;"></textarea>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="resume-section AditionalSection" id="AditionalSection-0" style="margin-top: -30px;&gt; &lt;div class=">
+                                  <div>
+                                    <div class="resume-section-text-container">
+                                      <div class="editable-field-wrapper">
+                                        <h1>ADDITIONAL INFORMATION<h1/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="moveable-items"style="margin-top:9px;">
+                                  <div class="resume-item-holder line-item editable">
+                                    <div draggable="false" id="sections-1-items-0">
+                                      <div class="item-object achievement-item">
+                                        <div class="inner">
+                                          <div class="achievement-item-content">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-title" placeholder="Languages:" rows="1" style="overflow: hidden;font-size: 14.6px;color: #000;line-height: normal;font-style: italic;"></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="padded-item-content"style="margin-left: 90px;margin-top: -20px;">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-description resume-first-color" data-allow-new-line="true" maxlength="1000" placeholder="Enter what languages you know." rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;"></textarea>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="inner">
+                                          <div class="achievement-item-content">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-title" placeholder="Skills:" rows="1" style="overflow: hidden;font-size: 14.6px;color: #000;line-height: normal;font-style: italic;"></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="padded-item-content"style="margin-left: 90px;margin-top: -20px;">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-description resume-first-color" data-allow-new-line="true" maxlength="1000" placeholder="Enter your skills." rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;"></textarea>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="inner">
+                                          <div class="achievement-item-content">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-title" placeholder="Courses:" rows="1" style="overflow: hidden;font-size: 14.6px;color: #000;line-height: normal;font-style: italic;"></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="padded-item-content"style="margin-left: 90px;margin-top: -20px;">
+                                            <div class="editable-field-wrapper">
+                                              <textarea class="editable-field achievement-item-description resume-first-color" data-allow-new-line="true" maxlength="1000" placeholder="Enter the courses that you passed." rows="1" style="overflow: hidden; font-weight: bold;font-size: 14.6px;color: #000;line-height: normal;"></textarea>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div id="intercom-container" style="position: fixed; width: 0px; height: 0px; bottom: 0px; right: 0px; z-index: 2147483647;">
+		<!-- react-empty: 1 -->
+	</div>
+</body>
+</html>

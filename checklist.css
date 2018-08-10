@@ -4,11 +4,14 @@ html {
 body {
 	overflow: hidden;
 	height: 100%;
+	box-sizing: initial;
+	background-color: #FAFAFA;
 }
 section {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	box-sizing: initial;
 }
 @font-face {
 	font-family: DIN Alternate Bold;
@@ -20,8 +23,9 @@ section {
 	position: relative;
 	height: 100%;
 	background: #EFEFEF;
+	box-sizing: initial;
 }
-#content {
+#content-checklist {
 	position: absolute;
 	top: 25px;
 	left: 55px;
@@ -30,19 +34,25 @@ section {
 	padding: 20px;
 	background: #FFFFFF;
 	box-shadow: 7px 6px 18px -7px #f3006e;
+	box-sizing: initial;
 }
-nav ul {
+#content-checklist nav ul {
 	display: flex;
 	table-layout: fixed;
 	width: 100%;
 	margin-bottom: 27px;
   height: 86px;
+	box-sizing: initial;
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
 }
-nav li {
+#content-checklist nav li {
 	display: table-cell;
 	padding-bottom: 5px;
+	box-sizing: initial;
 }
-nav li label {
+#content-checklist nav li label {
 	display: block;
 	margin: 10px;
 	padding: 0.3em;
@@ -50,108 +60,132 @@ nav li label {
 	text-align: center;
 	font-size: 10px;
 	color: #6D6C6C;
+	box-sizing: initial;
 }
-nav li label:hover {
+#content-checklist nav li label:hover {
 	background: #FBFBFB;
+	box-sizing: initial;
 }
-input[type="radio"] {
+#content-checklist input[type="radio"] {
 	position: absolute;
 	left: -100%;
+	box-sizing: initial;
 }
-#list-a-check:checked~nav label[for="list-a-check"], #list-b-check:checked~nav label[for="list-b-check"], #list-c-check:checked~nav label[for="list-c-check"] {
+#content-checklist #list-a-check:checked~nav label[for="list-a-check"], #list-b-check:checked~nav label[for="list-b-check"], #list-c-check:checked~nav label[for="list-c-check"] {
 	border-bottom: 2px solid #2E2E2F;
+	box-sizing: initial;
 }
-#list-a, #list-b, #list-c {
+#content-checklist #list-a, #list-b, #list-c {
 	display: none;
+	box-sizing: initial;
 }
-#list-a-check:checked~#list-a, #list-b-check:checked~#list-b, #list-c-check:checked~#list-c {
+#content-checklist #list-a-check:checked~#list-a, #list-b-check:checked~#list-b, #list-c-check:checked~#list-c {
 	display: block;
+	box-sizing: initial;
 }
-.circle_a {
+#content-checklist .circle_a {
 	background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #B78AAD;
 	border-radius: 50%;
 	height: 60px;
 	width: 60px;
 	transition: all .3s ease-in-out;
 	margin-left: 22%;
+	box-sizing: initial;
 }
-.circle_b {
+#content-checklist .circle_b {
 	background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #B78AAD;
 	border-radius: 50%;
 	height: 60px;
 	width: 60px;
 	transition: all .3s ease-in-out;
 	margin-left: 22%;
+	box-sizing: initial;
 }
-.circle_c {
+#content-checklist .circle_c {
 	background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #B78AAD;
 	border-radius: 50%;
 	height: 60px;
 	width: 60px;
 	transition: all .3s ease-in-out;
 	margin-left: 22%;
+	box-sizing: initial;
 }
-.text {
+#content-checklist .text {
 	color: #fff;
 	opacity: 0;
 	text-align: center;
 	padding-top: 0px;
 	transition: all .3s ease-in-out;
+	box-sizing: initial;
 }
-.circle_a:hover .text {
+#content-checklist .circle_a:hover .text {
 	padding-top: 40px;
 	opacity: 1;
+	box-sizing: initial;
 }
-.circle_b:hover .text {
+#content-checklist .circle_b:hover .text {
 	padding-top: 40px;
 	opacity: 1;
+	box-sizing: initial;
 }
-.circle_c:hover .text {
+#content-checklist .circle_c:hover .text {
 	padding-top: 40px;
 	opacity: 1;
+	box-sizing: initial;
 }
-li {
+#content-checklist li {
 	display: inline;
+	box-sizing: initial;
 }
-.section_a:hover {
-	background-color: #FBFBFB
+#content-checklist .section_a:hover {
+	background-color: #FBFBFB;
+	box-sizing: initial;
 }
-.section_b:hover {
-	background-color: #FBFBFB
+#content-checklist .section_b:hover {
+	background-color: #FBFBFB;
+	box-sizing: initial;
 }
-.section_c:hover {
-	background-color: #FBFBFB
+#content-checklist .section_c:hover {
+	background-color: #FBFBFB;
+	box-sizing: initial;
 }
-.list-a-check:hover {
-	background-color: #FBFBFB
+#content-checklist .list-a-check:hover {
+	background-color: #FBFBFB;
+	box-sizing: initial;
 }
-.list-b-check:hover {
-	background-color: #FBFBFB
+#content-checklist .list-b-check:hover {
+	background-color: #FBFBFB;
+	box-sizing: initial;
 }
-.list-c-check:hover {
-	background-color: #FBFBFB
+#content-checklist .list-c-check:hover {
+	background-color: #FBFBFB;
+	box-sizing: initial;
 }
-.list {}
-.list li {
+#content-checklist .list {}
+#content-checklist .list li {
 	position: static;
 	margin-bottom: 10px;
+	box-sizing: initial;
 }
-.list li a {
+#content-checklist .list li a {
 	position: static;
 	display: block;
+	box-sizing: initial;
 }
-.list li a.box {
+#content-checklist .list li a.box {
 	padding: 10px;
 	background: #fff;
 	border: 3px solid transparent;
 	border-radius: 10px;
 	transition: 0.2s linear;
+	box-sizing: initial;
 }
-.list li a.box:hover {
+#content-checklist .list li a.box:hover {
 	border-color: #38A8A8;
 	transition: 0.2s linear;
+	box-sizing: initial;
 }
-.list a.iconArea {
+#content-checklist .list a.iconArea {
 	cursor: pointer;
 	position: absolute;
 	display: block;
@@ -159,8 +193,9 @@ li {
 	width: 38px;
 	height: 50px;
 	margin-left: 300px;
+	box-sizing: initial;
 }
-.list a.iconArea:hover:after {
+#content-checklist .list a.iconArea:hover:after {
 	display: block;
 	content: " ";
 	width: 38px;
@@ -169,16 +204,18 @@ li {
 	top: 0;
 	left: 0;
 	z-index: 100;
+	box-sizing: initial;
 }
-.info {
+#content-checklist .info {
 	position: absolute;
 	top: 0;
 	left: 300px;
 	opacity: 0;
 	z-index: 100;
 	overflow: visible;
+	box-sizing: initial;
 }
-.info div {
+#content-checklist .info div {
 	position: absolute;
 	overflow: visible;
 	display: inline-block;
@@ -188,8 +225,9 @@ li {
 	padding: 20px;
 	background: #fff;
 	border: 1px solid #ddd;
+	box-sizing: initial;
 }
-.info div:after {
+#content-checklist .info div:after {
 	content: "";
 	position: absolute;
 	bottom: -9px;
@@ -202,6 +240,7 @@ li {
 	border-bottom: 1px solid #ddd;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
+	box-sizing: initial;
 }
 @-webkit-keyframes hopping {
 	0% {
@@ -277,59 +316,70 @@ body {
 }
 /* CHECKLIST */
 
-mark {
+#content-checklist mark {
 	background-color: transparent;
 	color: #232323;
+	box-sizing: initial;
 }
-.checkbox {
+#content-checklist .checkbox {
 	text-align: justify;
 	direction: rtl;
 	position: relative;
 	line-height: 0;
-	padding-bottom: 15px;
+	/* padding-bottom: 15px; */
 	height: 57px;
-	z-index: 1;
+	z-index: -1;
+	box-sizing: initial;
+	margin: 0;
 }
-.checkbox:after {
+#content-checklist .checkbox:after {
 	content: "";
 	width: 100%;
 	display: inline-block;
+	box-sizing: initial;
 }
-.checkbox input, .checkbox .label, .checkbox .check {
+#content-checklist .checkbox input, .checkbox .label, .checkbox .check {
 	display: inline-block;
 	vertical-align: middle;
+	box-sizing: initial;
 }
-.checkbox .label {
+#content-checklist .checkbox .label {
 	max-width: 200px;
+	box-sizing: initial;
 }
-.checkbox .check {
+#content-checklist .checkbox .check {
 	position: relative;
 	z-index: 1;
+	box-sizing: initial;
 }
-.checkbox input[type="checkbox"] {
+#content-checklist .checkbox input[type="checkbox"] {
 	opacity: 0;
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	cursor: pointer;
 	border-color: #494747;
+	box-sizing: initial;
 }
-.checkbox input[type="checkbox"]:focus {
+#content-checklist .checkbox input[type="checkbox"]:focus {
 	outline: 0;
+	box-sizing: initial;
 }
-.checkbox input[type="checkbox"]:checked+.ripple-container .check-off {
+#content-checklist .checkbox input[type="checkbox"]:checked+.ripple-container .check-off {
 	border-color: #38A8A8;
+	box-sizing: initial;
 }
-.checkbox input[type="checkbox"]:checked+.ripple-container .check-on:after {
+#content-checklist .checkbox input[type="checkbox"]:checked+.ripple-container .check-on:after {
 	content: "✓";
 	color: #38A8A8;
 	position: absolute;
 	font-size: 3em;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%);
+	box-sizing: initial;
 }
-.checkbox input[type="checkbox"]+.ripple-container {
+#content-checklist .checkbox input[type="checkbox"]+.ripple-container {
 	width: auto;
 	position: relative;
 	display: inline-block;
@@ -338,8 +388,9 @@ mark {
 	top: 2px;
 	pointer-events: none;
 	background-color: #494747;
+	box-sizing: initial;
 }
-.checkbox input[type="checkbox"]+.ripple-container .check-off {
+#content-checklist .checkbox input[type="checkbox"]+.ripple-container .check-off {
 	position: absolute;
 	width: 25px;
 	height: 25px;
@@ -348,34 +399,39 @@ mark {
 	border-radius: 2px;
 	border: 2px solid #232323;
 	transition: border-color ease 0.28s;
+	box-sizing: initial;
 }
-.task-list {
+#content-checklist .task-list {
 	position: relative;
 	padding: 15px 25px;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	box-sizing: initial;
 }
-.task-list mark {
+#content-checklist .task-list mark {
 	color: #494848;
 	display: inline-block;
 	margin-bottom: 1px;
 	font-size: 12px;
+	box-sizing: initial;
 }
-.task-list time {
+#content-checklist .task-list time {
 	font-weight: 300;
 	font-size: 8px;
 	line-height: 0px;
 	color: #999898;
+	box-sizing: initial;
 }
-.task-list ul {
+#content-checklist .task-list ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
 	z-index: 1;
+	box-sizing: initial;
 }
-.task-list ul li {
+#content-checklist .task-list ul li {
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
@@ -383,8 +439,9 @@ mark {
 	position: relative;
 	margin: 0;
 	z-index: 1;
+	box-sizing: initial;
 }
-.task-list ul li .label {
+#content-checklist .task-list ul li .label {
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
@@ -394,18 +451,22 @@ mark {
 	text-align: left;
 	opacity: 1;
 	max-width: unset;
+	box-sizing: initial;
 }
-.task-list ul li.task-checked .label {
+#content-checklist .task-list ul li.task-checked .label {
 	opacity: 0.5;
+	box-sizing: initial;
 }
-.task-list.current ul li {
+#content-checklist .task-list.current ul li {
 	border-top: 1px solid #b2b4b9;
+	box-sizing: initial;
 }
-.task-list.current ul li:first-child {
+#content-checklist .task-list.current ul li:first-child {
 	border-top: 0;
 	z-index: 1;
+	box-sizing: initial;
 }
-.name_a {
+#content-checklist .name_a {
 	font-size: 25px;
 	font-weight: bold;
 	color: #333232;
@@ -413,56 +474,68 @@ mark {
 	margin-right: auto;
 	width: 8em;
 	padding-bottom: 12px;
+	box-sizing: initial;
 }
-.explanation_a {
+#content-checklist .explanation_a {
 	font-size: 9px;
 	color: #999898;
 	margin-left: auto;
 	margin-right: auto;
 	width: 26em;
 	padding-bottom: 12px;
+	box-sizing: initial;
 }
-.line_panel {
+#content-checklist .line_panel {
 	border-bottom: 3px solid #999898;
 	margin-left: auto;
 	margin-right: auto;
 	width: 21em;
 	margin-top: -27px;
+	box-sizing: initial;
 }
-.line_a {
+#content-checklist .line_a {
 	border-bottom: 1px solid #999898;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: -7px;
+	margin-right: -7px;
 	width: 12em;
+	box-sizing: initial;
 }
-.basic_information_a {
+#content-checklist .basic_information_a {
 	margin-top: 15px;
+	box-sizing: initial;
+	width: 60%;
+	margin-left: 90px;
+	margin-right: 90px;
 }
-.line_check_a_1 {
+#content-checklist .line_check_a_1 {
 	border-bottom: 1px solid #999898;
 	margin-left: auto;
 	margin-right: auto;
 	width: 12em;
 	padding-top: 8px;
+	box-sizing: initial;
 }
-.line_check_a_2 {
+#content-checklist .line_check_a_2 {
 	border-bottom: 1px solid #999898;
 	margin-left: auto;
 	margin-right: auto;
 	width: 12em;
 	padding-top: 8px;
+	box-sizing: initial;
 }
-.line_check_a_3 {
+#content-checklist .line_check_a_3 {
 	border-bottom: 1px solid #999898;
 	margin-left: auto;
 	margin-right: auto;
 	width: 12em;
 	padding-top: 8px;
+	box-sizing: initial;
 }
-.line_check_a_4 {
+#content-checklist .line_check_a_4 {
 	border-bottom: 1px solid #999898;
 	margin-left: auto;
 	margin-right: auto;
 	width: 12em;
 	padding-top: 8px;
+	box-sizing: initial;
 }

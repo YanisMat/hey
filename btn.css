@@ -1,4 +1,4 @@
-#wrapper {
+#content-checklist #wrapper {
 	width: 100px;
 	margin: 0 auto;
 	/* padding: 20px; */
@@ -8,11 +8,12 @@
 	/* margin-left: 179px; */
 	/* margin-top: -41px; */
 	z-index: 1000;
-	margin-top: -17px;
+	/* margin-top: -17px; */
 	margin-left: 200px;
 	z-index: 2000;
+	box-sizing: initial;
 }
-.button {
+#content-checklist .button {
 	font-size: 8px;
 	padding: 4px 8px;
 	/* border: 1px solid #aaa; */
@@ -24,13 +25,16 @@
 	text-decoration: none;
 	cursor: pointer;
 	transition: all 0.2s ease-out;
+	box-sizing: initial;
 }
-.button:hover {
+#content-checklist .button:hover {
 	border-color: #999;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	box-sizing: initial;
 }
-.button:active {
+#content-checklist .button:active {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+	box-sizing: initial;
 }
 .overlay {
 	position: absolute;
